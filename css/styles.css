@@ -36,28 +36,18 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
-.logo-circle {
-    width: 40px;
+.nav-logo {
     height: 40px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-text {
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
+    width: auto;
 }
 
 .brand-name {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
+    color: #fff;
 }
 
 .brand-highlight {
@@ -98,38 +88,7 @@ body {
 /* About Section Styles */
 .about-section {
     background-color: var(--background-color);
-}
-
-.about-header {
-    margin-bottom: 60px;
-}
-
-.section-subtitle {
-    color: var(--primary-color);
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    display: block;
-    position: relative;
-    padding-right: 0;
-    padding-left: 80px;
-}
-
-.section-subtitle::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background-color: var(--primary-color);
-}
-
-.about-section .section-title {
-    font-size: 42px;
-    font-weight: 700;
-    margin-top: 5px;
-    color: var(--text-color);
+    padding: 80px 0;
 }
 
 .about-container {
@@ -137,18 +96,24 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .about-text {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    text-align: left;
 }
 
 .about-description {
     font-size: 16px;
     line-height: 1.8;
     color: #CCCCCC;
+    margin-bottom: 15px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .contact-button {
@@ -159,9 +124,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
-    margin-top: 20px;
     transition: background-color 0.3s ease;
-    width: fit-content;
 }
 
 .contact-button:hover {
@@ -187,31 +150,17 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .about-container {
         grid-template-columns: 1fr;
     }
-
-    .section-title {
-        font-size: 36px;
+    
+    .about-text {
+        order: 1;
     }
-
-    .nav-links {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .fixed-nav {
-        padding: 15px 20px;
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-
-    .about-description {
-        font-size: 14px;
+    
+    .about-image {
+        order: 2;
     }
 }
 
@@ -278,6 +227,7 @@ body {
     background-color: var(--background-color);
     padding: 150px 0;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .stats-container {
@@ -547,9 +497,67 @@ body {
 /* Team Section Styles */
 .team-section {
     background-color: var(--background-color);
-    padding: 150px 0;
-    overflow: hidden;
+    padding: 100px 0;
+    /* overflow: hidden; */
+    position: relative;
 }
+.team-section .section-title {
+    color: #0066FF;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+    padding: 30px;
+    opacity: 1;
+}
+
+
+.overlay-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.overlay-content p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.overlay-content {
+    color: white;
+}
+.team-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-item {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
 
 .team-container {
     max-width: 1400px;
@@ -599,7 +607,6 @@ body {
     filter: grayscale(0%);
     transform: scale(1.05);
 }
-
 .card-content {
     position: absolute;
     bottom: 0;
@@ -745,13 +752,13 @@ body {
     display: none;
 }
 
-.team-section .section-title {
+/* .team-section .section-title {
     font-size: 64px;
     font-weight: 900;
     margin-top: 20px;
     color: #fff;
     text-transform: uppercase;
-}
+} */
 
 .team-slider-container {
     position: relative;
@@ -1053,13 +1060,7 @@ body {
 }
 
 .about-header::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 50px;
-    height: 2px;
-    background-color: #0066ff;
+    display: none;
 }
 
 .services-grid {
@@ -1101,4 +1102,19 @@ body {
     .services-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.team-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.team-images img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #222;
 }

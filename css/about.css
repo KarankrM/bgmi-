@@ -1,0 +1,569 @@
+/* Slideshow Styles */
+.slideshow-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img,
+.slide-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Team Section Styles */
+.about-team-section {
+    padding: 100px 0;
+    background: var(--background-color);
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-text {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #CCCCCC;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: #0066ff;
+    font-weight: 700;
+}
+
+.team-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;  
+    height: 150px; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 18px; 
+    margin-bottom: 5px;
+}
+
+/* Tournament Folders Styles */
+.tournaments-section {
+    padding: 80px 0;
+    background: #111;
+    text-align: center;
+}
+
+.tournament-folders {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.tournament-folder {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.tournament-folder i {
+    font-size: 36px; 
+    color: var(--primary-color);
+}
+
+.tournament-folder h3 {
+    font-size: 16px; 
+    margin-top: 10px;
+}
+
+/* Clients Section Styles */
+.clients-section {
+    padding: 80px 0;
+    background: var(--background-color);
+    text-align: center;
+}
+
+.client-logos {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+}
+
+/* Highlights Section Styles */
+.highlights-section {
+    padding: 80px 0;
+    background: #111;
+    text-align: center;
+}
+
+.highlights-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.highlights-grid {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 30px;
+}
+
+.highlight-item {
+    min-width: 300px;
+    flex: 0 0 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.highlight-item img,
+.highlight-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlight-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 102, 255, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.highlight-nav:hover {
+    background: rgba(0, 102, 255, 0.8);
+}
+
+.prev-highlight {
+    left: 10px;
+}
+
+.next-highlight {
+    right: 10px;
+}
+
+/* Common Section Title Styles */
+.section-title {
+    font-size: 28px; 
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    font-size: 16px; 
+    margin-bottom: 15px;
+}
+
+.highlight-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.highlight-item img,
+.highlight-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-grid,
+    .tournament-folders,
+    .client-logos,
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Tournament Table Styles */
+.folder-content {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.folder-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #fff;
+    background: #1a1a1a;
+}
+
+.folder-content th,
+.folder-content td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.folder-content th {
+    background: #0066ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.folder-content tr:hover {
+    background: rgba(0, 102, 255, 0.1);
+}
+
+.tournament-folder {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tournament-folder:hover {
+    transform: translateY(-2px);
+    background: #222;
+}
+
+.tournament-folder i {
+    color: #0066ff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.tournament-folder h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: #0a0a0a;
+    padding: 120px 0 60px;  /* Increased top padding from 60px to 120px */
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 60px;
+}
+
+.brand-banner {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.brand-logo img {
+    max-width: 200px;
+}
+
+.brand-message {
+    text-align: center;
+}
+
+.brand-message h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0066ff;
+}
+
+.brand-message p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.brand-image img {
+    width: 100%;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+
+/* About Section */
+.about-section {
+    background: #0a0a0a;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content p {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Clients Section */
+.clients-section {
+    background: #0a0a0a;
+    padding: 60px 0;
+    /* Meet The Team Section */
+    .team-section {
+        background: #0a0a0a;
+        padding: 60px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .team-section .section-title {
+        font-size: 24px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 50px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: 1200px;
+        margin: 0 auto 30px;
+        padding: 0 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: relative;
+    }
+    
+    .team-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .team-member {
+        text-align: center;
+    }
+    
+    .member-image {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 3px solid #0066ff;
+    }
+    
+    .member-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .member-name {
+        color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .member-role {
+        color: #666666;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    @media (max-width: 768px) {
+        .team-grid {
+            gap: 30px;
+        }
+        
+        .member-image {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+.clients-intro {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.clients-intro p {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.client-logos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.client-logos img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.client-logos img:hover {
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    .client-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brand-banner {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .brand-message h2 {
+        font-size: 24px;
+    }
+}
