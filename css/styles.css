@@ -73,8 +73,7 @@ body {
 
 /* Section Global Styles */
 .section {
-    padding: var(--section-padding);
-    min-height: 100vh;
+    padding: 60px 0;
     display: flex;
     align-items: center;
 }
@@ -225,9 +224,8 @@ body {
 /* Services/Stats Section Styles */
 .services-section {
     background-color: var(--background-color);
-    padding: 150px 0;
+    padding: 60px 0;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 
 .stats-container {
@@ -497,8 +495,7 @@ body {
 /* Team Section Styles */
 .team-section {
     background-color: var(--background-color);
-    padding: 100px 0;
-    /* overflow: hidden; */
+    padding: 40px 0;
     position: relative;
 }
 .team-section .section-title {
@@ -553,7 +550,7 @@ body {
 
 .team-item {
     position: relative;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -590,7 +587,7 @@ body {
 
 .card-image {
     width: 100%;
-    height: 450px;
+    height: 550px;
     overflow: hidden;
 }
 
@@ -794,7 +791,7 @@ body {
 
 .card-image {
     width: 100%;
-    height: 450px;
+    height: 550px;
     overflow: hidden;
 }
 
@@ -900,9 +897,8 @@ body {
 /* Contact Section Styles */
 .contact-section {
     background-color: var(--background-color);
-    padding: 150px 0 0;
+    padding: 60px 0 0;
     text-align: center;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1104,6 +1100,21 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-item {
+        height: 400px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+}
+
 .team-images {
     display: flex;
     justify-content: center;
@@ -1117,4 +1128,16 @@ body {
     object-fit: cover;
     border-radius: 12px;
     background: #222;
+}
+
+.overlay-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    font-size: 16px;
+    opacity: 0.8;
+    line-height: 1.4;
 }

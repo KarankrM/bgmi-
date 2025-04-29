@@ -1,0 +1,131 @@
+/* Contact Page Styles */
+.contact-section {
+    padding: 120px 0 80px;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Add this */
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Add this */
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+}
+
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Remove the grid layout and use flex instead */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.contact-text {
+    color: #CCCCCC;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.contact-info-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info-item {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-info-item i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.info-content {
+    text-align: center;
+}
+
+.info-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.info-content p {
+    color: #CCCCCC;
+    line-height: 1.6;
+}
+
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-links a {
+    color: #CCCCCC;
+    font-size: 28px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Update responsive design */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-title {
+        font-size: 36px;
+    }
+    
+    .contact-subtitle {
+        font-size: 24px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-info-item {
+        margin-bottom: 20px;
+    }
+}
